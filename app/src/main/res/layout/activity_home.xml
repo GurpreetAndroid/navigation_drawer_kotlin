@@ -50,6 +50,7 @@
                 android:orientation="vertical">
 
                 <include layout="@layout/nav_header"/>
+
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
@@ -67,8 +68,6 @@
 
 
             </LinearLayout>
-            <!-- Custom Navigation Drawer End -->
-
 
         </androidx.drawerlayout.widget.DrawerLayout>
 

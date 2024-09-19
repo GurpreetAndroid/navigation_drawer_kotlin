@@ -13,8 +13,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.pack.navigation.R
 
 
-class NavigationRVAdapter(private var items: ArrayList<NavigationItemModel>, private var currentPos: Int) :
-    RecyclerView.Adapter<NavigationRVAdapter.NavigationItemViewHolder>() {
+class DrawerItemAdapter(private var items: ArrayList<NavigationItemModel>, private var currentPos: Int) :
+    RecyclerView.Adapter<DrawerItemAdapter.NavigationItemViewHolder>() {
 
     private lateinit var context: Context
 

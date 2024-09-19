@@ -1,7 +1,6 @@
 package com.pack.navigation
 
 import android.content.Context
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
@@ -18,7 +17,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.infodart.kenstar_crm.ClickListener
 import com.infodart.kenstar_crm.NavigationItemModel
-import com.infodart.kenstar_crm.NavigationRVAdapter
+import com.infodart.kenstar_crm.DrawerItemAdapter
 import com.infodart.kenstar_crm.RecyclerTouchListener
 import com.pack.navigation.databinding.ActivityHomeBinding
 
@@ -28,7 +27,7 @@ class HomeActivity : AppCompatActivity() {
     private var context: Context = this@HomeActivity
 
 
-    private lateinit var adapter: NavigationRVAdapter
+    private lateinit var adapter: DrawerItemAdapter
 
     private var items = arrayListOf(
         NavigationItemModel(R.drawable.ic_menu_home, "Home"),
@@ -123,7 +122,7 @@ class HomeActivity : AppCompatActivity() {
 
 
     private fun updateAdapter(highlightItemPos: Int) {
-        adapter = NavigationRVAdapter(items, highlightItemPos)
+        adapter = DrawerItemAdapter(items, highlightItemPos)
         binding.navigationRv.adapter = adapter
         adapter.notifyDataSetChanged()
     }
